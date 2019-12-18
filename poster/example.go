@@ -12,7 +12,7 @@ import (
 func TestPoster()(bool,error){
 	var bgPath = "/d.png"
 	var typePath = "/ziti.ttc"
-	p := "/public"
+	p := "./public"
 	url := "https://www.baidu.com"
 	//获取二维码
 	qrImage,errn := GetQRImage(url,qrcode.Medium,164)
@@ -49,7 +49,7 @@ func TestPoster()(bool,error){
 	}
 
 	d1 := NewDrawText(png)
-	err1 := d1.MergeText(url,18,trueTypeFont,80,45)
+	err1 := d1.MergeText("你好",18,trueTypeFont,80,45)
 	if err1 != nil{
 		return false,err1
 	}
