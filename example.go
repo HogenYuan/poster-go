@@ -1,4 +1,4 @@
-package main
+package poster_go
 
 import (
 	"github.com/gogf/gf/util/gconv"
