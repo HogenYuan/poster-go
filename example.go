@@ -1,10 +1,12 @@
 package main
 
 import (
+	"github.com/gogf/gf/util/gconv"
 	"github.com/skip2/go-qrcode"
 	"image"
 	"image/png"
 	"os"
+	"time"
 )
 
 func TestPoster()(bool,error){
@@ -35,7 +37,7 @@ func TestPoster()(bool,error){
 	MergeImage(png, qrImage, qrImage.Bounds().Min.Sub(image.Pt(QR_Pt.X,QR_Pt.Y)))
 
 	//新建文件载体
-	merged,err := NewMerged(p+"/poster.png")
+	merged,err := NewMerged(p+"/poster"+gconv.String(time.Now().Unix())+".png")
 	if err != nil{
 		return false,err
 	}
