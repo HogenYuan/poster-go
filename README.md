@@ -8,10 +8,10 @@
 ## Installation
 
 ```bash
-	import (
-            "fmt"
-             "github.com/HogenYuan/poster-go/poster"
-        )
+import (
+    "fmt"
+     "github.com/HogenYuan/poster-go/poster"
+)
 ```
 
 ## Run
@@ -21,11 +21,11 @@
     //工作路径
     p := "./public/"
     //背景图文件
-	var bgPath = "d.png"    
-	//字体文件(可选)
-	var typePath = "/ziti.ttc"  
+    var bgPath = "d.png"    
+    //字体文件(可选)
+    var typePath = "/ziti.ttc"  
 	
-	//新建图片载体png
+    //新建图片载体png
     png := NewPNG(0,0,640,1040)
     //新建文件载体
     merged,err := NewMerged(p+"/poster"+gconv.String(time.Now().Unix())+".png")
